@@ -1,0 +1,4 @@
+# Symlinks — never subject to text/EOL normalization
+.agents/skills/showfolio -text
+.claude/skills/showfolio -text
+.opencode/skills/showfolio -text

@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:'JetBrains Mono';src:url('fonts/jetbrains-mono.woff2')}
+html,body{margin:0;width:1920px;height:1080px;background:#040408;overflow:hidden}
+body{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px}
+#logo{width:760px;height:auto}
+.eb{font:500 22px 'JetBrains Mono';letter-spacing:.14em;color:rgba(255,255,255,.65)}
+</style></head><body><svg id="logo" width="170" height="28" viewBox="0 0 170 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path pathLength="1" class="mark" d="M17.9411 26.5149C16.793 26.8285 15.5839 27 14.3328 27C11.9515 27 9.71789 26.3893 7.78272 25.3239L14.3328 8.39238L19.7575 25.8763C24.4208 23.8505 27.6733 19.2966 27.6733 14.0001C27.6733 6.82026 21.7005 1 14.3328 1C6.96495 1 0.992188 6.82032 0.992188 14.0001C0.992188 18.1696 3.00904 21.878 6.14118 24.2568" stroke="#A3DC2F" stroke-width="1.5" stroke-miterlimit="10"/>
+<path class="ltr" d="M35.7461 13.9987C35.7461 6.79727 41.2824 1 49.0918 1C53.8214 1 57.9645 3.37658 60.0911 7.04919L58.3678 8.02135C56.6813 4.92475 53.1249 2.83627 49.0918 2.83627C42.3456 2.83627 37.6893 7.80533 37.6893 13.9986C37.6893 20.1917 42.3456 25.1607 49.0918 25.1607C53.1615 25.1607 56.7546 23.0362 58.4412 19.8676L60.1643 20.8399C58.0745 24.5486 53.8949 26.9971 49.0919 26.9971C41.2824 26.9974 35.7461 21.2002 35.7461 13.9987Z" fill="white"/>
+<path class="ltr" d="M80.1452 2.80037H72.079V26.2051H70.0994V2.80037H62.0332V1H80.1452V2.80037Z" fill="white"/>
+<path class="ltr" d="M97.1224 19.7958H84.2534L81.7602 26.2051H79.707L89.6796 1H91.7328L101.669 26.2051H99.6155L97.1224 19.7958ZM96.4259 17.9954L90.7062 3.34047L84.9867 17.9954H96.4259Z" fill="white"/>
+<path class="ltr" d="M103.025 13.9987C103.025 6.79727 108.562 1 116.371 1C121.101 1 125.244 3.37658 127.37 7.04919L125.647 8.02135C123.961 4.92475 120.404 2.83627 116.371 2.83627C109.625 2.83627 104.969 7.80533 104.969 13.9986C104.969 20.1917 109.625 25.1607 116.371 25.1607C120.441 25.1607 124.034 23.0362 125.721 19.8676L127.444 20.8399C125.354 24.5486 121.174 26.9971 116.371 26.9971C108.562 26.9974 103.025 21.2002 103.025 13.9987Z" fill="white"/>
+<path class="ltr" d="M146.801 24.4046V26.205H132.025V1H146.618V2.80037H133.969V12.5944H145.701V14.3948H133.969V24.4048L146.801 24.4046Z" fill="white"/>
+<path class="ltr" d="M161.614 15.8708H153.511V26.205H151.568V1H161.688C165.867 1 169.277 4.34867 169.277 8.45347C169.277 11.8742 166.894 14.7548 163.631 15.6189L170.01 26.205H167.774L161.614 15.8708ZM153.511 14.0706H161.688C164.804 14.0706 167.334 11.5501 167.334 8.45347C167.334 5.32083 164.804 2.80037 161.688 2.80037H153.511V14.0706Z" fill="white"/>
+</svg><div class="eb" id="eb">BUILT BY OCTACER</div>
+<script>
+const mark=document.querySelector('.mark'),ltr=[...document.querySelectorAll('.ltr')],eb=document.getElementById('eb');
+mark.style.strokeDasharray=1;
+const ease=x=>1-Math.pow(1-x,3),cl=x=>Math.max(0,Math.min(1,x));
+window.seek=t=>{ // pure function of time t (seconds): mark draws 0-0.9s, letters 0.7-1.3s, eyebrow 1.3-1.7s, hold to ~2.2s
+  mark.style.strokeDashoffset=1-ease(cl(t/0.9));
+  ltr.forEach((p,i)=>{const k=ease(cl((t-0.7-i*0.05)/0.35));p.style.opacity=k;p.style.transform='translateY('+(1-k)*6+'px)'});
+  eb.style.opacity=ease(cl((t-1.3)/0.4));
+};seek(0);
+</script></body></html>

@@ -1,0 +1,24 @@
+{
+  "name": "showfolio",
+  "version": "1.0.0",
+  "description": "Turn the current project into a polished showcase video (about 40, 60, or 90 seconds) using Hyperframes.",
+  "author": {
+    "name": "Hasnan"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["video", "showcase", "demo", "hyperframes", "skill"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Showfolio",
+    "shortDescription": "Turn your project into a polished showcase video.",
+    "longDescription": "Create a 40, 60, or 90 second showcase video from the current project. It asks what to feature, logs in with a test account when needed, and delivers a tailored story, motion, music, sound effects, poster frame, and share copy.",
+    "developerName": "Hasnan",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Execute"],
+    "defaultPrompt": [
+      "Turn this project into a showcase video.",
+      "Let's showfolio what I built.",
+      "Make a 60 second demo video for this project."
+    ]
+  }
+}

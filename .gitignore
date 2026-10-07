@@ -1,0 +1,25 @@
+# OS / editor cruft
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+**/.venv/
+.uv-cache/
+
+# Local tooling / machine config
+.playwright-mcp/
+.agents/
+skills-lock.json
+.claude/
+
+# HyperFrames render artifacts + heavy composition sources (never committed)
+**/showfolio-output*/
+**/renders/
+**/.thumbnails/
+**/.waveform-cache/
+
+.codesk

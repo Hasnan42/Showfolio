@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "showfolio",
+  "version": "1.0.0",
+  "description": "Turn the current project into a polished showcase video (about 40, 60, or 90 seconds) using Hyperframes.",
+  "author": {
+    "name": "Hasnan"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["video", "showcase", "demo", "hyperframes", "skill"]
+}

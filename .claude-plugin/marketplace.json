@@ -1,0 +1,14 @@
+{
+  "name": "showfolio",
+  "description": "You built it. Now show it. Turn any project into a polished showcase video.",
+  "owner": {
+    "name": "Hasnan"
+  },
+  "plugins": [
+    {
+      "name": "showfolio",
+      "source": "./",
+      "description": "Turn the current project into a polished showcase video (about 40, 60, or 90 seconds) using Hyperframes."
+    }
+  ]
+}

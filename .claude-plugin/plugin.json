@@ -1,0 +1,10 @@
+{
+  "name": "showfolio",
+  "description": "Turn the current project into a polished showcase video (about 40, 60, or 90 seconds) using Hyperframes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hasnan"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["video", "showcase", "demo", "hyperframes", "skill"]
+}
